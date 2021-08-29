@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Deepak Desi Gym</title>
+    <style>
+        body {
+            /* reseting CSS */
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            /* Image dimesion should be of the order of (1540X730) px */
+            background-image: url('img/background.jpg');
+            background-repeat: no-repeat;
+        }
+        
+        #banner {
+            /* When to bring any element to center 
+            1. Set display to block. 
+            2. Set width 
+            3. Set margin in Y-axis and set auto in X- axis */
+            display: block;
+            margin: 20px auto;
+            width: 26%;
+            /* border: 2px solid rosybrown; */
+            font-family: Lobster;
+            font-size: 1.5cm;
+            font-weight: bolder;
+        }
+        
+        .left {
+            /* Basically left corner is being used for logo 
+              --> use absolute postion
+              --> shift the postions using left right move
+            */
+            position: absolute;
+            left: 34px;
+            top: 21px;
+            display: inline-block;
+            /* border: 2px solid red; */
+        }
+        
+        .left img {
+            /*  This Function is used to change the color of a image */
+            filter: invert(100%);
+            height: 100px;
+            width: 120px;
+        }
+        /* INcase you want to add some text with logo */
+        /* .left div {
+            text-align: center;
+            font-weight: 900;
+            font-style: inherit;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } */
+        
+        .mid {
+            /* When to bring any element to center 
+            1. Set display to block. 
+            2. Set width 
+            3. Set margin in Y-axis and set auto in X- axis */
+            display: block;
+            /* border: 2px solid rgb(122, 126, 116); */
+            width: 48%;
+            margin: 30px auto;
+        }
+        
+        .right {
+            /* Basically left corner is being used for Searchbar 
+              --> use absolute postion
+              --> shift the postions using left right move
+            */
+            position: absolute;
+            right: 34px;
+            top: 60px;
+            display: inline-block;
+            /* border: 2px solid yellow; */
+        }
+        
+        .navbar li {
+            /* This is used to bring all the elements in one line..... */
+            display: inline-block;
+            font-size: 21px;
+        }
+        
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            /* This is used to remove underline from links */
+            padding: 20px 34px;
+            font-weight: bold;
+        }
+        
+        .navbar li a:hover {
+            text-decoration: underline;
+            color: #c3d7d8;
+        }
+        
+        .btn {
+            /* CSS basic steps for button 
+            1. Set top margin 0 and lit bit in horizontal
+            2. Set padding
+            3. chang fontsize,wieght,family accordingly
+            4. Give border
+            5. Change background color,text color,border radius
+            6. Set cursor type to  pointer  */
+            margin: 0px 3px;
+            padding: 5px 7px;
+            font-size: 17px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border: 2px solid #9b9b86;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            color: #9b9b86;
+            text-decoration: underline;
+        }
+        
+        .container {
+            margin: 90px 35px;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+            width: 25%;
+        }
+        
+        .container h1 {
+            text-align: center;
+        }
+        
+        .form-group input {
+            text-align: center;
+            display: block;
+            width: 354px;
+            padding: 7px;
+            margin: 10px auto;
+            border: 2px solid #3b3939;
+            border-radius: 18px;
+            font-family: Lobster;
+            cursor: pointer;
+        }
+        
+        .form-btn input {
+            text-align: center;
+            display: inline-block;
+            width: 172px;
+            border: 2px solid #060606;
+            border-radius: 18px;
+            padding: 7px;
+            margin: 4px auto;
+            margin-left: 10px;
+            cursor: pointer;
+            font-family: Lobster;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="banner">Deepak Desi Gym</h1>
+        <!-- Logo Section -->
+        <div class="left">
+            <!-- Inserting a logo -->
+            <img src="img/logo.jpg" alt="Gymlogo">
+
+            <!-- <div>Desi Gym</div> -->
+        </div>
+
+        <div class="right">
+            <button class="btn">Login/Signup</button>
+            <button class="btn">Log Out</button>
+        </div>
+
+        <!-- creating a Navigation Bar in header -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">JOIN Us</a></li>
+                <li><a href="#">ABOUT Us</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="noaction.php">
+                <h1>Register here</h1>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Your name">
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-group" placeholder="Enter your number">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-group" placeholder="Enter here">
+                </div>
+                <div class="form-btn">
+                    <input type="submit" value="submit now">
+                    <input type="reset" value="reset form">
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
